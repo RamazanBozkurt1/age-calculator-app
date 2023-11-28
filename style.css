@@ -1,0 +1,131 @@
+:root{
+--White: hsl(0, 0%, 100%);
+--Off-white: hsl(0, 0%, 94%);
+--Light-grey: hsl(0, 0%, 86%);
+--Smokey-grey: hsl(0, 1%, 44%);
+--Off-black: hsl(0, 0%, 8%);
+--Purple: hsl(259, 100%, 65%);
+--Light-red: hsl(0, 100%, 67%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--Light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    padding: 10px 30px;
+    border-radius: 16px 16px 150px 16px ;
+}
+.inputs{
+    border-bottom: 2px solid var(--Light-grey);
+    padding: 30px 0;
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+    width: 500px;
+}
+.inputs-in{
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+input{
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    border: 1px solid var(--Light-grey);
+    border-radius: 5px;
+    color: var(--Off-black);
+    font-size: 20px;
+    font-weight: 700;
+}
+input:hover{
+    cursor: pointer;
+    border-color: var(--Purple);
+}
+#input1, #input2{
+    margin-left: 20px;
+}
+label{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--Smokey-grey);
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+section > p{
+    font-weight: 800;
+    font-size: 80px;
+    color: var(--Off-black);
+}
+div p{
+    font-size: 12px;
+    color: var(--Light-red);
+    margin-top: 5px;
+    display: none;
+}
+span{
+    color: var(--Purple);
+    margin-right: 10px;
+}
+svg{
+    background-color: var(--Purple);
+    border-radius: 50%;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: -35px;
+    right: 0;
+}
+svg:hover{
+    background-color: var(--Off-black);
+    cursor: pointer;
+}
+@media (max-width: 560px){
+    section{
+        padding: 15px;
+        border-bottom-right-radius: 100px;
+    }
+    input{
+        width: 70px;
+        font-size: 15px;
+        padding: 10px 5px;
+    }
+    label{
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    .inputs{
+        width: auto;
+    }
+    #input1,#input2{
+        margin-left: 15px;
+    }
+    svg{
+        width: 50px;
+        height: 50px;
+        bottom: -25px;
+        right: 40%;
+    }
+    section > p{
+        font-size: 50px;
+    }
+    div p{
+        font-size: 10px;
+    }
+}
